@@ -7,6 +7,8 @@ import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
 
+import Navbar from "./_components/Navbar"
+
 const inter = Inter({ subsets: ["latin"] })
 
 interface RootLayoutProps {
@@ -79,7 +81,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Navbar />
+          <div className="mx-auto max-w-5xl px-4 py-6">{children}</div>
         </ThemeProvider>
       </body>
     </html>
