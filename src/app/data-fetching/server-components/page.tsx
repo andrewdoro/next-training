@@ -10,6 +10,8 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
+import Users from "../_components/users"
+
 const ServerPage = async () => {
   const users = (await fetch("https://jsonplaceholder.typicode.com/users").then(
     (res) => res.json()
@@ -19,17 +21,7 @@ const ServerPage = async () => {
       <h1 className="text-4xl font-semibold tracking-tight">
         Server Components
       </h1>
-
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {users.map((user) => (
-          <Card key={user.id}>
-            <CardHeader>
-              <CardTitle className="line-clamp-1 ">{user.name}</CardTitle>
-              <CardDescription>{user.email}</CardDescription>
-            </CardHeader>
-          </Card>
-        ))}
-      </div>
+      <Users />
     </>
   )
 }
