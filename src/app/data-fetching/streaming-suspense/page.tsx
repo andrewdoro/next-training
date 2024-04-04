@@ -8,8 +8,7 @@ import UsersSkeleton from "../_components/users-skeleton"
 const ServerPage = async () => {
   return (
     <>
-      <H1>Server Components</H1>
-
+      <H1>Streaming Suspense</H1>
       <Suspense fallback={<UsersSkeleton />}>
         <Users />
       </Suspense>
