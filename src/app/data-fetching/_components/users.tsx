@@ -1,5 +1,6 @@
 import React from "react"
 
+import { baseAPI } from "@/lib/api"
 import { User } from "@/lib/types"
 import {
   Card,
@@ -9,8 +10,8 @@ import {
 } from "@/components/ui/card"
 
 const Users = async () => {
-  const users = (await fetch("https://jsonplaceholder.typicode.com/users").then(
-    (res) => res.json()
+  const users = (await fetch(`${baseAPI}/users`).then((res) =>
+    res.json()
   )) as User[]
 
   //add artificial delay
@@ -19,14 +20,20 @@ const Users = async () => {
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       {users.map((user) => (
-        <Card key={user.id}>
-          <CardHeader>
-            <CardTitle className="line-clamp-1 ">{user.name}</CardTitle>
-            <CardDescription>{user.email}</CardDescription>
-          </CardHeader>
-        </Card>
+        <UserCard key={user.id} user={user} />
       ))}
     </div>
+  )
+}
+
+export const UserCard = ({ user }: { user: User }) => {
+  return (
+    <Card key={user.id}>
+      <CardHeader>
+        <CardTitle className="line-clamp-1 ">{user.name}</CardTitle>
+        {/* <CardDescription>{user.email}</CardDescription> */}
+      </CardHeader>
+    </Card>
   )
 }
 

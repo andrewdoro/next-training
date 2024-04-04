@@ -1,14 +1,14 @@
 import React, { Suspense } from "react"
 
+import { H1 } from "@/components/ui/typography"
+
 import Users from "../_components/users"
 import UsersSkeleton from "../_components/users-skeleton"
 
 const ServerPage = async () => {
   return (
     <>
-      <h1 className="text-4xl font-semibold tracking-tight">
-        Server Components
-      </h1>
+      <H1>Server Components</H1>
 
       <Suspense fallback={<UsersSkeleton />}>
         <Users />

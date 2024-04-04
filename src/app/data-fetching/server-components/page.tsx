@@ -1,14 +1,7 @@
 import React from "react"
 
 import { User } from "@/lib/types"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { H1 } from "@/components/ui/typography"
 
 import Users from "../_components/users"
 
@@ -18,9 +11,7 @@ const ServerPage = async () => {
   )) as User[]
   return (
     <>
-      <h1 className="text-4xl font-semibold tracking-tight">
-        Server Components
-      </h1>
+      <H1>Server Components</H1>
       <Users />
     </>
   )

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 export const items = [
   {
     name: "data-fetching",
-    items: ["server-components", "streaming-suspense"],
+    items: ["client", "server-components", "streaming-suspense"],
   },
 ]
 const Sidebar = () => {
