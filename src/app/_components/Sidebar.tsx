@@ -6,12 +6,17 @@ export const items = [
   {
     name: "Data Fetching",
     href: "/data-fetching",
-    items: ["client", "server-components", "streaming-suspense"],
+    items: [
+      "client",
+      "server-components",
+      "streaming-suspense",
+      "loading-page",
+    ],
   },
   {
     name: "Caching levels",
-    href: "/data-fetching",
-    items: ["client", "server-components", "streaming-suspense"],
+    href: "/caching-levels",
+    items: ["revalidate"],
   },
   {
     name: "Layouts",
