@@ -1,6 +1,7 @@
 import React from "react"
 
 import { localAPI } from "@/lib/api"
+import { H1 } from "@/components/ui/typography"
 import Users from "@/app/data-fetching/_components/users"
 
 export const revalidate = 10
@@ -10,11 +11,11 @@ const RevalidateCaching = async () => {
     (res) => res.json() as Promise<{ time: string }>
   )
   return (
-    <div>
-      <p>This fetches on this page are revalidate every 10s</p>
+    <>
+      <H1> Fetch calls on this page are revalidated every 10s</H1>
       <div>{time}</div>
       <Users />
-    </div>
+    </>
   )
 }
 

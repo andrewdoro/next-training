@@ -11,6 +11,7 @@ export const items = [
       "server-components",
       "streaming-suspense",
       "loading-page",
+      "server-actions",
     ],
   },
   {
@@ -18,11 +19,11 @@ export const items = [
     href: "/caching-levels",
     items: ["revalidate"],
   },
-  {
-    name: "Layouts",
-    href: "/data-fetching",
-    items: ["client", "server-components", "streaming-suspense"],
-  },
+  // {
+  //   name: "Layouts",
+  //   href: "/data-fetching",
+  //   items: ["client", "server-components", "streaming-suspense"],
+  // },
 ]
 const Sidebar = () => {
   return (
