@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
+import { ModeToggle } from "@/components/mode-toggle"
 
 export const items = [
   {
@@ -48,7 +49,7 @@ const Sidebar = () => {
           </div>
         )
       })}
-
+      <ModeToggle />
       <a href="https://nextjs.org/docs" className="mt-auto w-full">
         <Button variant="ghost" className="w-full">
           Documentation

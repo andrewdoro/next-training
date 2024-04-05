@@ -4,6 +4,7 @@ import { baseAPI } from "@/lib/api"
 import { User } from "@/lib/types"
 import { H1 } from "@/components/ui/typography"
 
+import UserAdd from "./_components/UserAdd"
 import UserItem from "./_components/UserItem"
 
 export const revalidate = 0
@@ -14,6 +15,9 @@ const ServerActions = async () => {
   return (
     <>
       <H1>Server Actions</H1>
+      <div className="flex">
+        <UserAdd />
+      </div>
       <ul className="grid grid-cols-4 gap-4">
         {users.map((user) => (
           <UserItem key={user.id} user={user} />
